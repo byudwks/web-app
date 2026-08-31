@@ -1,15 +1,16 @@
 import { createRoot } from "react-dom/client";
 import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
+import "@/index.css";
 
 createInertiaApp({
     strictMode: true,
-    title: (title) => `${title} - Web - App`,
+    title: (title) => `${title} - Web-App`,
 
     resolve: (name) =>
         resolvePageComponent(
-            `./Apps/${name}.jsx`,
-            import.meta.glob("./Apps/**/*.jsx"),
+            `./src/${name}.jsx`,
+            import.meta.glob("./src/**/*.jsx"),
         ),
 
     setup({ el, App, props }) {

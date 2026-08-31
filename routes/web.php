@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/', function () {
-    return Inertia::render('Home');
+    return Inertia::render('pages/Home');
 });
 
+Route::get('/login', function () {
+    return Inertia::render('pages/auth/SignIn');
+});
