@@ -11,3 +11,5 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return Inertia::render('pages/auth/SignIn');
 });
+
+Route::inertia('/register', 'pages/auth/SignUp');
