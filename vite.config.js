@@ -19,4 +19,9 @@ export default defineConfig({
             ignored: ["**/storage/framework/views/**"],
         },
     },
+    resolve: {
+        alias: {
+            "@": "/resources/js",
+        },
+    },
 });
